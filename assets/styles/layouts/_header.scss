@@ -1,0 +1,124 @@
+header{
+
+
+    img{
+       
+        @media screen and (max-width:1250px) {
+            margin:48px 0 64px;
+        }
+
+        @media screen and (max-width:550px) {
+            margin:48px 0 54px;
+        }
+        
+        margin: 80px 0 54px;
+    }
+
+    .header-container{
+
+        @media screen and (max-width:1250px) {
+            padding: 0;
+        }
+        padding-top: 54px;
+        min-height:419px;
+        position: relative;
+        overflow: hidden;
+        &::before{
+            @media screen and (max-width:550px) {
+                position: relative;
+                display: inline-block;
+                background: url(../images/mobile/image-hero.png) center/contain;
+                background-repeat: no-repeat;
+                min-width: 414px;
+                width: 110%;
+                min-height:153px;
+                max-height:414px;
+                top:0;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom:48px ;
+                
+            }
+
+            @media screen and (max-width:1250px) {
+                position: relative;
+                display: inline-block;
+                background: url(../images/tablet/image-hero.png) center/contain;
+                background-repeat: no-repeat;
+                width: 110%;
+                max-height:820px ;
+                top:0;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom:72px ;
+            }
+
+            content: "";
+            position: absolute;
+            background: url(../images/desktop/image-hero-left.png) center/contain;
+            background-repeat: no-repeat;
+            width: 393px;
+            min-height: 303px;
+            top: 0;
+            left: -35px;
+        }
+
+        &::after{
+            @media screen and (max-width:1250px) {
+             display: none;
+            }
+            content: "";
+            position: absolute;
+            background: url(../images/desktop/image-hero-right.png) center/contain;
+            background-repeat: no-repeat;
+            width: 393px;
+            height: 303px;
+            top: 0;
+            right: -35px;
+        }
+        .header-content{
+            @media screen and (max-width:550px) {
+                width: 327px;
+            }
+            max-width: 540px;
+            margin: 0 auto;
+            p{
+                @media screen and (max-width:550px) {
+                    margin: 24px 0 32px;
+                }
+                margin: 34px 0 32px;
+            }
+
+            .btn-container{
+               display: flex;
+               justify-content: center;
+               gap:16px;
+
+               @media screen and (max-width:550px) {
+               flex-direction: column;
+               align-items: center;
+            }
+
+               .green{
+                    width:193px;
+                    min-height: 58px;
+                    background: $color1;
+                    span{
+                        color: $color3;
+                    }
+                    &:hover{
+                       background: rgba($color1, $alpha: 0.8);
+                    }
+               } 
+               .purple{
+                width:139px;
+                min-height: 58px;
+                background: $color2;
+                &:hover{
+                    background: rgba($color2, $alpha: 0.8);
+                 }
+           } 
+            }
+        }
+    }
+}
